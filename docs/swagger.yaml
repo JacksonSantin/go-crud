@@ -1,12 +1,10 @@
-basePath: /
-host: localhost:port
 info:
   contact:
-    name: Vinícius Boscardin
+    name: Jackson Dhanyel Santin
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  title: Clean GO API Docs
+  title: GO API - CRUD Posts
   version: 1.0.0
 paths:
   /posts:
@@ -16,7 +14,9 @@ paths:
       description: Get all posts
       produces:
       - application/json
-      responses: {}
+      responses:
+        "200":
+          description: Posts finded
       summary: Get all posts
       tags:
       - posts
@@ -24,9 +24,24 @@ paths:
       consumes:
       - application/json
       description: Create a new post with a title and body
+      parameters:
+      - description: Post body
+        in: body
+        name: Body
+        required: true
+        schema:
+          type: string
+      - description: Post title
+        in: body
+        name: Title
+        required: true
+        schema:
+          type: string
       produces:
       - application/json
       responses:
+        "200":
+          description: Post created successfully
         "400":
           description: Failed to create post
       summary: Create a new post
@@ -63,7 +78,9 @@ paths:
         type: string
       produces:
       - application/json
-      responses: {}
+      responses:
+        "200":
+          description: Post finded
       summary: Get a specific post
       tags:
       - posts
@@ -77,9 +94,25 @@ paths:
         name: id
         required: true
         type: string
+      - description: Post body
+        in: body
+        name: Body
+        required: true
+        schema:
+          type: string
+      - description: Post title
+        in: body
+        name: Title
+        required: true
+        schema:
+          type: string
       produces:
       - application/json
-      responses: {}
+      responses:
+        "200":
+          description: Post updated successfully
+        "400":
+          description: Failed to update post
       summary: Update a post
       tags:
       - posts

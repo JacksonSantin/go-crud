@@ -16,13 +16,11 @@ func init() {
 }
 
 
-// @title Clean GO API Docs
+// @title GO API - CRUD Posts
 // @version 1.0.0
-// @contact.name Vinícius Boscardin
+// @contact.name Jackson Dhanyel Santin
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-// @host localhost:port
-// @BasePath /
 func main() {
 	r := gin.Default()
 

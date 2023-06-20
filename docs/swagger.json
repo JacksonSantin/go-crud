@@ -1,9 +1,9 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Clean GO API Docs",
+        "title": "GO API - CRUD Posts",
         "contact": {
-            "name": "Vinícius Boscardin"
+            "name": "Jackson Dhanyel Santin"
         },
         "license": {
             "name": "Apache 2.0",
@@ -11,8 +11,6 @@
         },
         "version": "1.0.0"
     },
-    "host": "localhost:port",
-    "basePath": "/",
     "paths": {
         "/posts": {
             "get": {
@@ -27,7 +25,11 @@
                     "posts"
                 ],
                 "summary": "Get all posts",
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Posts finded"
+                    }
+                }
             },
             "post": {
                 "description": "Create a new post with a title and body",
@@ -41,7 +43,30 @@
                     "posts"
                 ],
                 "summary": "Create a new post",
+                "parameters": [
+                    {
+                        "description": "Post body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Post title",
+                        "name": "Title",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
+                    "200": {
+                        "description": "Post created successfully"
+                    },
                     "400": {
                         "description": "Failed to create post"
                     }
@@ -70,7 +95,11 @@
                         "required": true
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Post finded"
+                    }
+                }
             },
             "put": {
                 "description": "Update a post by ID",
@@ -91,9 +120,34 @@
                         "name": "id",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "description": "Post body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Post title",
+                        "name": "Title",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Post updated successfully"
+                    },
+                    "400": {
+                        "description": "Failed to update post"
+                    }
+                }
             },
             "delete": {
                 "description": "Delete a post by ID",

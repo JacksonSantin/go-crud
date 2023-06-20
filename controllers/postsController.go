@@ -12,13 +12,16 @@ import (
 // @Tags posts
 // @Accept json
 // @Produce json
+// @Param Body body string true "Post body"
+// @Param Title body string true "Post title"
+// @Success 200 "Post created successfully"
 // @Failure 400 "Failed to create post"
 // @Router /posts [post]
 func PostsCreate(c *gin.Context) {
 	// Get data of req body
 	var body struct {
-		Body string
-		Title string
+		Body  string `json:"body" binding:"required"`
+		Title string `json:"title" binding:"required"`
 	}
 
 	c.Bind(&body)
@@ -44,6 +47,7 @@ func PostsCreate(c *gin.Context) {
 // @Tags posts
 // @Accept json
 // @Produce json
+// @Success 200 "Posts finded"
 // @Router /posts [get]
 func PostsShow(c *gin.Context) {
 	// Get thw Posts
@@ -63,6 +67,7 @@ func PostsShow(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param id path string true "Post ID"
+// @Success 200 "Post finded"
 // @Router /posts/{id} [get]
 func PostsIndex(c *gin.Context) {
 		// Get id off URL
@@ -85,6 +90,10 @@ func PostsIndex(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param id path string true "Post ID"
+// @Param Body body string true "Post body"
+// @Param Title body string true "Post title"
+// @Success 200 "Post updated successfully"
+// @Failure 400 "Failed to update post"
 // @Router /posts/{id} [put]
 func PostsUpdate(c *gin.Context) {
 	// Get id off URL
@@ -92,8 +101,8 @@ func PostsUpdate(c *gin.Context) {
 
 	// Get the data off req body
 	var body struct {
-		Body string
-		Title string
+		Body  string `json:"body" binding:"required"`
+		Title string `json:"title" binding:"required"`
 	}
 
 	c.Bind(&body)

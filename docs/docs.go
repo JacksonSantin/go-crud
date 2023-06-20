@@ -11,7 +11,7 @@ const docTemplate = `{
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
         "contact": {
-            "name": "Vinícius Boscardin"
+            "name": "Jackson Dhanyel Santin"
         },
         "license": {
             "name": "Apache 2.0",
@@ -35,7 +35,11 @@ const docTemplate = `{
                     "posts"
                 ],
                 "summary": "Get all posts",
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Posts finded"
+                    }
+                }
             },
             "post": {
                 "description": "Create a new post with a title and body",
@@ -49,7 +53,30 @@ const docTemplate = `{
                     "posts"
                 ],
                 "summary": "Create a new post",
+                "parameters": [
+                    {
+                        "description": "Post body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Post title",
+                        "name": "Title",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
+                    "200": {
+                        "description": "Post created successfully"
+                    },
                     "400": {
                         "description": "Failed to create post"
                     }
@@ -78,7 +105,11 @@ const docTemplate = `{
                         "required": true
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Post finded"
+                    }
+                }
             },
             "put": {
                 "description": "Update a post by ID",
@@ -99,9 +130,34 @@ const docTemplate = `{
                         "name": "id",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "description": "Post body",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Post title",
+                        "name": "Title",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
-                "responses": {}
+                "responses": {
+                    "200": {
+                        "description": "Post updated successfully"
+                    },
+                    "400": {
+                        "description": "Failed to update post"
+                    }
+                }
             },
             "delete": {
                 "description": "Delete a post by ID",
@@ -137,10 +193,10 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0.0",
-	Host:             "localhost:port",
-	BasePath:         "/",
+	Host:             "",
+	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "Clean GO API Docs",
+	Title:            "GO API - CRUD Posts",
 	Description:      "",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
