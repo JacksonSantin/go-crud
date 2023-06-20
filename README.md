@@ -1,3 +1,9 @@
+<div align="center">
+	<img src="https://www.tabnine.com/blog/wp-content/uploads/2021/01/blog-3-1.png" height="150" alt="go-image">
+</div>
+
+---
+
 <h1 align="center"> 
 	API RESTful para cadatro de postagens. 
 </h1>
@@ -10,6 +16,13 @@
   <a href="https://rocketseat.com.br">
     <img alt="Feito por Jackson Dhanyel Santin" src="https://img.shields.io/badge/feito%20por-Jackson-%238257E5">
   </a>
+</p>
+
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-tecnologias">Tecnologias</a> •  
+ <a href="#-autor">Autor</a> •
+ <a href="#-licença">Licença</a>
 </p>
 
 ## 💻 Sobre o projeto
@@ -25,6 +38,43 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é importante ter um bom editor para trabalhar com o código, sugiro o [VSCode](https://code.visualstudio.com/)
 
 Você também pode utilizar uma ferramenta para poder consumir a API back-end, para esse projeto, utilizamos o [Insomnia](https://insomnia.rest/).
+
+#### 🎲 Rodando o Backend (servidor)
+
+```bash
+
+# Clone este repositório
+$ git clone git@github.com:JacksonSantin/go-crud.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd go-crud
+
+# Execute a aplicação com o comando abaixo
+$ CompileDaemon -command="./go-crud"
+
+# O servidor inciará na porta:8080 - acesse http://localhost:8080
+
+```
+
+<p align="center">
+  <a href="https://github.com/JacksonSantin/go-crud/blob/main/Insomnia_crud_golang.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+</p>
+
+---
+
+## 🛠 Tecnologias
+
+#### **Backend** ([NodeJS](https://nodejs.org/en/) + [Javascript](https://www.javascript.com/))
+
+- **[Gin](https://gin-gonic.com/)**
+- **[GoDotEnv](https://pkg.go.dev/github.com/joho/godotenv#section-readme)**
+- **[Swaggo](https://github.com/swaggo/swag)**
+- **[SwaggerUI](https://swagger.io/tools/swagger-ui/)**
+- **[Gorm](https://gorm.io/)**
+
+> Veja o arquivo [go.mod](https://github.com/JacksonSantin/go-crud/blob/main/go.mod)
+
+---
 
 #### **Utilitários**
 
