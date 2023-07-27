@@ -13,7 +13,7 @@
 
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/JacksonSantin/go-crud?color=%238257E5">
 
-  <a href="https://rocketseat.com.br">
+  <a href="https://curriculum-vitae-jacksonsantin.vercel.app">
     <img alt="Feito por Jackson Dhanyel Santin" src="https://img.shields.io/badge/feito%20por-Jackson-%238257E5">
   </a>
 </p>
@@ -85,7 +85,7 @@ $ CompileDaemon -command="./go-crud"
 
 <table>
   <tr>
-    <td align="center"><a href="https://curriculo-vitae-web.web.app/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub></a></td>
+    <td align="center"><a href="https://curriculum-vitae-jacksonsantin.vercel.app"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub></a></td>
   </tr>
 </table>
 
@@ -102,7 +102,7 @@ $ CompileDaemon -command="./go-crud"
 
 <table>
   <tr>
-    <td align="center"><a href="https://curriculo-vitae-web.web.app/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub></a></td>
+    <td align="center"><a href="https://curriculum-vitae-jacksonsantin.vercel.app"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub></a></td>
   </tr>
 </table>
 
@@ -119,6 +119,6 @@ $ CompileDaemon -command="./go-crud"
 
 Este projeto esta sobe a licença [MIT](https://github.com/JacksonSantin/go-crud/blob/master/LICENSE).
 
-Feito com ❤️ por Jackson Dhanyel Santin 👋🏽 [Entre em contato!](https://curriculo-vitae-web.web.app)
+Feito com ❤️ por Jackson Dhanyel Santin 👋🏽 [Entre em contato!](https://curriculum-vitae-jacksonsantin.vercel.app/contato)
 
 ---
