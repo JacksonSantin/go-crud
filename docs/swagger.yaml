@@ -1,0 +1,119 @@
+info:
+  contact:
+    name: Jackson Dhanyel Santin
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: GO API - CRUD Posts
+  version: 1.0.0
+paths:
+  /posts:
+    get:
+      consumes:
+      - application/json
+      description: Get all posts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Posts finded
+      summary: Get all posts
+      tags:
+      - posts
+    post:
+      consumes:
+      - application/json
+      description: Create a new post with a title and body
+      parameters:
+      - description: Post body
+        in: body
+        name: Body
+        required: true
+        schema:
+          type: string
+      - description: Post title
+        in: body
+        name: Title
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Post created successfully
+        "400":
+          description: Failed to create post
+      summary: Create a new post
+      tags:
+      - posts
+  /posts/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a post by ID
+      parameters:
+      - description: Post ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Post deleted successfully
+      summary: Delete a post
+      tags:
+      - posts
+    get:
+      consumes:
+      - application/json
+      description: Get a specific post by ID
+      parameters:
+      - description: Post ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Post finded
+      summary: Get a specific post
+      tags:
+      - posts
+    put:
+      consumes:
+      - application/json
+      description: Update a post by ID
+      parameters:
+      - description: Post ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Post body
+        in: body
+        name: Body
+        required: true
+        schema:
+          type: string
+      - description: Post title
+        in: body
+        name: Title
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Post updated successfully
+        "400":
+          description: Failed to update post
+      summary: Update a post
+      tags:
+      - posts
+swagger: "2.0"
